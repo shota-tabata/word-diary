@@ -10,5 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+/*
+Route::get('/', function(){
+    return view('calendar');
+});
+*/
+Route::get('/', 'EventController@index');
+Route::post('event.store', 'EventController@store');
 
-Route::get('/index', 'EventController@index');
+
